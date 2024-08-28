@@ -31,7 +31,7 @@
         <img src="img/cake6.jpg" alt="Delicious Pizza" class="card-image">
         <div class="card-content">
             <h3 class="card-title">Pepperoni Pizza</h3>
-            <p class="card-email">contact@pizzashop.com</p>
+            <p class="card-email">contact@p.com</p>
             <p class="card-price">$15.99</p>
             <p class="card-ingredients">
                 <strong>Ingredients:</strong> Pepperoni, mozzarella, tomato sauce, olive oil, oregano.

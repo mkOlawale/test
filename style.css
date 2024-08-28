@@ -69,12 +69,12 @@ header{
     display: none;
 }
 /* navigation ends right here */
-
+/* error display */
 .error_display{
     color: red!important;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+/* ** the div end hereerror display */
 /* form style starts from here */
 
 .form-container {
@@ -206,6 +206,7 @@ footer{
     background: #333;
     height: 150px;
     margin-bottom: -40px;
+    text-align: center;
 }
 footer h1{
     color: #fff;

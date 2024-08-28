@@ -28,9 +28,17 @@ $errors = array('email' => '', 'title' => '', 'ingredients' => '');
     }else{
         // $our_email = htmlspecialchars($_POST['email']);
         $ingredients = $_POST['ingredients'];
+        // the regular expression is not correct
+        // it is requesting for comma and space while i have already use coma seperated already
         if(!preg_match('/^([a-zA-Z\s]+) (,*\s*[a-zA-Z\s]*$/' ,$ingredients)){
             $errors['ingredients'] = " ingredients must be comma seperated list";
         }
+    }
+
+    if(array_filter($errors)){
+        echo "There's an error";
+    }else{
+        header('Location: index.php');
     }
     
   }
