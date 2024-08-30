@@ -1,5 +1,5 @@
 <?php
-
+    $conn = mysqli_connect('localhost', 'ola', '123', 'table');
     $products = [
         ['name' => 'shirt', 'price' => 500],
         ['name' => 'ewu', 'price' => 50],
