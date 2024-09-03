@@ -198,8 +198,18 @@ h2 {
 }
 
 /* * * * pizza display style ends from here */
-
-
+.btn_info{
+    padding: 10px;
+   background: purple;
+   color: white;
+   outline: none;
+    border: none;
+}
+.btn_info a{
+   color: white;
+   text-decoration: none;
+  
+}
 /* footer starts from here */
 footer{
     margin: 0 auto;

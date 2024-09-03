@@ -1,4 +1,6 @@
 <?php
+// importing database connection 
+@include('config/database.php');
 
 // i will be pushing errors to an associative array from here
 
@@ -37,8 +39,18 @@ $errors = array('email' => '', 'title' => '', 'ingredients' => '');
 
     if(array_filter($errors)){
         echo "There's an error";
-    }else{
-        header('Location: index.php');
+    }else{ 
+        $email = mysqli_real_escape_string($connection, $_POST['email']);
+        $title = mysqli_real_escape_string($connection, $_POST['title']);
+        $ingredients = mysqli_real_escape_string($connection, $_POST['ingredients']);
+        // insert the data into the database
+            $inserting_data = "INSERT INTO pizza(email, title, ingredients) VALUES('$email', '$title', '$ingredients')";
+            if(mysqli_query($connection, $inserting_data)){
+                  header('Location: index.php');
+            }else{
+                echo "There's an error" . mysqli_error($connection);
+            }
+      
     }
     
   }
@@ -49,7 +61,7 @@ $errors = array('email' => '', 'title' => '', 'ingredients' => '');
 <?php  @include('header.php'); ?> <br> <br>
 <div class="form-container">
         <h2>Add the Rceipe</h2>
-        <form action="addpizza.php" method="POST">
+        <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
             <div class="input-group">
                 <label for="email">Email Address</label>
                 <input type="text" id="email" name="email" value="<?php echo htmlspecialchars($email)?>" placeholder="Enter your email">

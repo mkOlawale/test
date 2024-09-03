@@ -23,7 +23,7 @@
                     <li><a href="#">Air Tools</a></li>
                     <li><a href="#">Hand Tools</a></li>
                 </ul>
-            <li><a href="#">Services</a></li>
+            <li><a href="test.php">Services</a></li>
             <li><a href="#">About</a></li>
             <li><a href="addpizza.php">ADD PIZZA</a></li>
             </ul>
