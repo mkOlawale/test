@@ -1,6 +1,4 @@
 <?php
-echo "hello world";
-
     $connection = mysqli_connect('localhost', 'Hackerslord', 'Hackerslord8774', 'php_pizza');
 
     if(!$connection){
@@ -13,9 +11,5 @@ echo "hello world";
       $res = mysqli_query($connection, $selecting);
   
       $pizzas = mysqli_fetch_all($res, MYSQLI_ASSOC);
-
-        mysqli_free_result($res);
-      mysqli_close($connection);
-  echo $_SERVER['PHP_SELF'];
     //   print_r($pizzas);
 ?>
